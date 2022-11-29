@@ -12,7 +12,7 @@ describe("APIserver", () => {
   });
 
   it("handles invalid requests", async () => {
-    const response = await request.get("/food");
+    const response = await request.get("/foo");
     expect(response.status).toEqual(404);
   });
 
