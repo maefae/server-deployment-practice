@@ -10,4 +10,15 @@ describe("APIserver", () => {
     expect(response.text).toBeTruthy();
     expect(response.text).toEqual("Hello");
   });
+
+  it("handles invalid requests", async () => {
+    const response = await request.get("/food");
+    expect(response.status).toEqual(404);
+  });
+
+  it("handles errors", async () => {
+    const response = await request.get("/bad");
+    expect(response.status).toEqual(500);
+    expect(response.body.route).toEqual("/bad");
+  });
 });
