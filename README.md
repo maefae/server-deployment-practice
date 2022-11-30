@@ -1,37 +1,44 @@
-# package.json Notes:
+# LAB - Class 01
 
-## For React Applications
+## Project: Server Deployment Practice
 
- To deploy your application at GitHub pages, you'll need to add a home page property to your package.json which points to the deployed base URL of your GitHub Pages site.
- 
- *NOTE: This will break deployments to other hosting services such as Netlify, Vercel, or AWS Amplify, so if you later wish to deploy there, remove this property completely*
- 
-     {
-       "homepage": "https://yourname.github.io/repository-name"
-     }
+### Author: Megan Seibert-Hughes
 
-## Node / Express Applications
+### Problem Domain
+To create and deploy a web server using CI and CD and become used to the overall process of building and deploying servers.
 
-### For Tests
-Your Scripts section should have the following, so that you can easily run tests locally and in your CI
+### Links and Resources
+[ci/cd](https://github.com/maefae/server-deployment-practice/actions) (GitHub Actions)
+[Prod Deployment - back](https://four01d49-server-deploy-prod-t3cy.onrender.com)
+[Dev Deployment - front](https://four01d49-server-deploy-dev-t3cy.onrender.com)
 
-  "scripts": {
-    "start": "node index.js",
-    "lint": "eslint **/*.js",
-    "test": "jest --verbose --coverage",
-    "test-watch": "jest --watchAll --verbose --coverage"
-},
+### Setup
 
+#### .env requirements
 
-### For NPM Modules
+see `.env.sample`
+- PORT: 3001
 
-If you are creating a module to deploy at NPM, you'll want a "bin" section that identifies the name of the global command to run and your .js file that runs when called.
+#### How to initialize/run your application
+nodemon
 
-"bin": {
-    "fetch": "index.js"
-}
+#### Features / Routes
 
-Additionally, that file should have as it's first line, so that it'll run without having to type "node filename.js" every time
+- Feature One: Deploy to Dev
+- GET : `/` - specific route to hit
+- GET : `bad` - specific route to hit
 
-#!/usr/bin/env node
+- Feature Two: Deploy to Prod
+GET : `/hello` - specific route to hit
+GET : `bad` - specific route to hit
 
+#### Tests
+- How do you run tests?
+  - npm test
+- Any tests of note?
+  - handles root path
+  - handles invalid requests
+  - handles errors
+
+### UML
+![UML](./401-class1-uml.PNG)
