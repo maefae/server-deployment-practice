@@ -9,8 +9,8 @@ To create and deploy a web server using CI and CD and become used to the overall
 
 ### Links and Resources
 [ci/cd](https://github.com/maefae/server-deployment-practice/actions) (GitHub Actions)
-[Prod Deployment - back](https://four01d49-server-deploy-prod-t3cy.onrender.com)
-[Dev Deployment - front](https://four01d49-server-deploy-dev-t3cy.onrender.com)
+[Prod Deployment - back]()
+[Dev Deployment - front]()
 
 ### Setup
 
